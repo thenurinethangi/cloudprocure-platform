@@ -1,0 +1,16 @@
+[submodule "config-server"]
+	path = config-server
+	url = https://github.com/thenurinethangi/cloudprocure-config-server.git
+	branch = main
+[submodule "eureka-server"]
+	path = eureka-server
+	url = https://github.com/thenurinethangi/cloudprocure-eureka-server.git
+	branch = main
+[submodule "api-gateway"]
+	path = api-gateway
+	url = https://github.com/thenurinethangi/cloudprocure-api-gateway.git
+	branch = main
+[submodule "config-repository"]
+	path = config-repository
+	url = https://github.com/thenurinethangi/cloudprocure-config-repository.git
+	branch = main

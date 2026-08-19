@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Guarded VM startup template. It is inert until copied to a provisioned image,
+# all tokens are replaced, and the metadata flag is explicitly enabled.
+if [[ "${ENABLE_CLOUDPROCURE_STARTUP:-false}" != "true" ]]; then
+  echo "CloudProcure startup disabled; set ENABLE_CLOUDPROCURE_STARTUP=true in the instance template."
+  exit 0
+fi
+
+install_root="/opt/cloudprocure"
+ecosystem_file="${install_root}/platform-ecosystem.config.cjs"
+[[ -f "${ecosystem_file}" ]] || { echo "Missing ${ecosystem_file}"; exit 1; }
+java -version 2>&1 | grep -q 'version "25' || { echo "Java 25 is required"; exit 1; }
+command -v pm2 >/dev/null || { echo "PM2 must be baked into the base image"; exit 1; }
+
+pm2 start "${ecosystem_file}" --only "<PM2_APPLICATION_NAME>"
+pm2 save
