@@ -79,6 +79,21 @@ git clone --recurse-submodules https://github.com/thenurinethangi/cloudprocure-p
 cd cloudprocure-platform
 ```
 
+If the repository was already cloned without submodules:
+
+```bash
+git submodule update --init --recursive
+```
+
+The repository includes:
+
+- `config-server`
+- `config-repository`
+- `eureka-server`
+- `api-gateway`
+
+Each platform component contains its own build and runtime instructions.
+
 ## Architecture
 
 ```text
