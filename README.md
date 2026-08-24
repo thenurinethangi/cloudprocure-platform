@@ -1,8 +1,3 @@
----
-
-##  `cloudprocure-platform/README.md`
-
-```markdown
 # CloudProcure Platform
 
 Platform super-repository for the **ProcureFlow Enterprise Procurement System**, developed for the ITS 2130 - Enterprise Cloud Architecture final project.
