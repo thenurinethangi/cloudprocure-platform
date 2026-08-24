@@ -62,6 +62,22 @@ Key infrastructure includes:
 
 Config Server and Eureka run with multiple instances to provide platform availability.
 
+## Setup / Getting Started
+
+### Prerequisites
+
+- Git
+- Java 25
+- Internet access to clone the submodule repositories
+
+### Clone the Repository
+
+Clone the parent repository together with all platform submodules:
+
+```bash
+git clone --recurse-submodules https://github.com/thenurinethangi/cloudprocure-platform.git
+cd cloudprocure-platform
+
 ## Architecture
 
 ```text
