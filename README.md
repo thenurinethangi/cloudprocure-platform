@@ -77,6 +77,7 @@ Clone the parent repository together with all platform submodules:
 ```bash
 git clone --recurse-submodules https://github.com/thenurinethangi/cloudprocure-platform.git
 cd cloudprocure-platform
+```
 
 ## Architecture
 
